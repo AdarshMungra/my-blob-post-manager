@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+
+.app {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.blog-form input,
+.blog-form textarea {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.blog-form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.blog-post {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+  margin: 0 0 10px;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
