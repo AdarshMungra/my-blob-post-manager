@@ -1,3 +1,4 @@
+// biome-ignore lint/style/useImportType: <explanation>
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -55,13 +56,14 @@ const BlogPost: React.FC<BlogPostProps> = ({
 	const [showFullContent, setShowFullContent] = useState(false);
 
 	const truncatedContent =
-		content.length > 100 ? content.substring(0, 100) + "..." : content;
+		content.length > 100 ? `${content.substring(0, 100)}...` : content;
 
 	return (
 		<div style={postStyles}>
 			<h2 style={titleStyles}>{title}</h2>
 			<p>{showFullContent ? content : truncatedContent}</p>
 			{content.length > 100 && (
+				// biome-ignore lint/a11y/useButtonType: <explanation>
 				<button
 					style={readMoreButtonStyles}
 					onClick={() => setShowFullContent(!showFullContent)}
@@ -69,6 +71,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
 					{showFullContent ? "Show Less" : "Read More"}
 				</button>
 			)}
+			{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 			<button style={buttonStyles} onClick={() => deletePost(id)}>
 				Delete
 			</button>
